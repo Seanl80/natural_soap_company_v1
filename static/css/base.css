@@ -6,7 +6,6 @@ body {
     background: url('/media/hero-soap.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
     font-family: 'Nunito';
 }
 
@@ -17,6 +16,12 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+    color: white;
+}
+
+.h1head {
+    text-shadow: 2px 2px 2px black;
+    backdrop-filter: blur(5px);
 }
 
 .logo-font {
@@ -27,33 +32,42 @@ body {
     width: fit-content;
 }
 
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
+.content {
+    text-shadow: 1px 1px 1px black;
+    backdrop-filter: blur(50px);
 }
 
-.btn-black {
-    background: black;
+.shop-now-button {
+    color: white;
+    min-width: 200px;
+}
+
+.dropdown-item {
     color: white;
 }
 
 .shop-now-button:hover,
 .shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.shop-now-button:focus {
     background: #222;
     color: white;
 }
 
-.text-black {
-    color: #000 !important;
+#topnav, #mobilenav, .dropdown-menu {
+    background-color: #000 !important;
 }
 
 .border-black {
     border: 1px solid black !important;
+}
+
+i,
+.my-0 {
+    color: white;
+}
+
+.content {
+
 }
 
 /* -------------------------------- Media Queries */
@@ -75,6 +89,35 @@ body {
         z-index: 1030;
     }
 
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* mobile nav bar on small screens */
+@media (max-width: 992px) {
+    .h1head{
+        font-size: 32px;
+    }
+    .header-container {
+        padding-top: 164px;
+    }
+}
+ ul {
+    padding: 0px;
+    margin: 0px;
+ }
+
+.navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+@media (max-width: 420px) {
+    ul {
+        font-size: small;
+    }
     .header-container {
         padding-top: 164px;
     }
