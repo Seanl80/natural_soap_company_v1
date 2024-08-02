@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">center
+    <div class="container header-container">
         <div class="row">
             <div class="col"></div>
         </div>
@@ -17,7 +17,7 @@
                 Welcome to the Natural Soap Company! Your one stop shop for natural ingredient soaps!
             </h1>
             <div class="my-5">
-                <a href="" class="shop-now-button btn btn-success btn-lg rounded-pill text-uppercase py-3">
+                <a href="{% url 'products' %}" class="shop-now-button btn btn-success btn-lg rounded-pill text-uppercase py-3">
                     Shop Now
                 </a>
             </div>
