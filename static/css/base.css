@@ -19,13 +19,14 @@ body {
     color: white;
 }
 
-.h1head {
+.h1head, .h2head{
     text-shadow: 2px 2px 2px black;
     backdrop-filter: blur(5px);
 }
 
-.logo-font {
-    text-transform: uppercase;
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
 }
 
 .main-logo-link {
@@ -64,6 +65,16 @@ body {
 i,
 .my-0 {
     color: white;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: url('/media/hero-soap.jpg') no-repeat center center fixed;
+	z-index: -1;
 }
 
 /* -------------------------------- Media Queries */

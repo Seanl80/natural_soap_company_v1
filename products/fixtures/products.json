@@ -35,7 +35,7 @@
           "ingredients":"Olive oil, coconut oil, palm oil, blueberry extract, water, sodium hydroxide.",
           "price":3.99,
           "category":3,
-          "image":"blue-stripe.jpg"
+          "image":"blueberry-soap.jpg"
        }
     },
     {
@@ -217,7 +217,7 @@
           "ingredients":"Olive oil, coconut oil, palm oil, water, sodium hydroxide.",
           "price":9.99,
           "category":2,
-          "image":"savon-du-marseille.jpg"
+          "image":"savon-du-marseille-soap.jpg"
        }
     },
     {
