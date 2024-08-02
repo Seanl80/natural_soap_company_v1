@@ -1,0 +1,314 @@
+[
+    {
+       "pk":1,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360385",
+          "name":"Huile 72%",
+          "description":" A luxurious soap containing 72% premium oils, offering deep moisturizing and nourishment for your skin.",
+          "ingredients":"Olive oil, coconut oil, palm oil, shea butter, water, sodium hydroxide.",
+          "price":12.99,
+          "category":1,
+          "image":"72%-huile-soap.jpg"
+       }
+    },
+    {
+       "pk":2,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360386",
+          "name":"Calendula",
+          "description":"Our Calendula Soap is perfect for sensitive skin, enriched with the soothing and healing properties of calendula flowers.",
+          "ingredients":"Olive oil, coconut oil, palm oil, calendula extract, calendula petals, water, sodium hydroxide.",
+          "price":7.99,
+          "category":1,
+          "image":"calendula-soap.jpg"
+       }
+    },
+    {
+       "pk":3,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360387",
+          "name":"Blueberry",
+          "description":"Enjoy the sweet, fruity aroma of our Blueberry Soap, which gently cleanses and rejuvenates your skin.",
+          "ingredients":"Olive oil, coconut oil, palm oil, blueberry extract, water, sodium hydroxide.",
+          "price":3.99,
+          "category":3,
+          "image":"blue-stripe.jpg"
+       }
+    },
+    {
+       "pk":4,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360388",
+          "name":"Coconut",
+          "description":" Indulge in the tropical scent and rich lather of our Coconut Soap, ideal for hydrating and refreshing your skin.",
+          "ingredients":"Olive oil, coconut oil, palm oil, coconut extract, water, sodium hydroxide.",
+          "price":2.99,
+          "category":1,
+          "image":"coconut-soap.jpg"
+       }
+    },
+    {
+       "pk":5,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360389",
+          "name":"Coffee",
+          "description":"Awaken your senses with our Coffee Soap, featuring real coffee grounds for gentle exfoliation and a burst of energy.",
+          "ingredients":"Olive oil, coconut oil, palm oil, coffee grounds, coffee extract, water, sodium hydroxide.",
+          "price":6.99,
+          "category":1,
+          "image":"coffee-soap.jpg"
+       }
+    },
+    {
+       "pk":6,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360390",
+          "name":"Mango",
+          "description":"Treat your skin to the tropical goodness of our Mango Soap, providing a rich and creamy lather with a vibrant mango fragrance.",
+          "ingredients":"Olive oil, coconut oil, palm oil, mango extract, water, sodium hydroxide.",
+          "price":5.99,
+          "category":1,
+          "image":"mango-soap.jpg"
+       }
+    },
+    {
+       "pk":7,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360391",
+          "name":"Fruit and Nut",
+          "description":"Experience the delightful blend of peach and almond in our Fruit and Nut Soap, providing a sweet scent and gentle exfoliation.",
+          "ingredients":"Olive oil, coconut oil, palm oil, peach extract, almond pieces, water, sodium hydroxide.",
+          "price":6.99,
+          "category":1,
+          "image":"fruit-nut-soap.jpg"
+       }
+    },
+    {
+       "pk":8,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360392",
+          "name":"Long grass and plants",
+          "description":"Our Long Grass and Plants Soap offers a fresh, earthy aroma, perfect for bringing a touch of nature to your daily routine.",
+          "ingredients":"Olive oil, coconut oil, palm oil, long grass extract, plant extracts, water, sodium hydroxide.",
+          "price":1.99,
+          "category":3,
+          "image":"grass-soap.jpg"
+       }
+    },
+    {
+       "pk":9,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360393",
+          "name":"Herbal",
+          "description":"Embrace the natural goodness of various herbs with our Herbal Soap, formulated to soothe and nourish your skin.",
+          "ingredients":"Olive oil, coconut oil, palm oil, herbal extracts, water, sodium hydroxide.",
+          "price":6.99,
+          "category":1,
+          "image":"herbal-soap.jpg"
+       }
+    },
+    {
+       "pk":10,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360394",
+          "name":"Lavender",
+          "description":"Relax and unwind with the calming scent of our Lavender Soap, made to soothe both your skin and your senses.",
+          "ingredients":"Olive oil, coconut oil, palm oil, lavender oil, lavender petals, water, sodium hydroxide.",
+          "price":3.99,
+          "category":1,
+          "image":"lavender-soap.jpg"
+       }
+    },
+    {
+       "pk":11,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360395",
+          "name":"Lemon",
+          "description":"Refresh your skin with our invigorating Lemon Soap, providing a zesty citrus scent and deep cleansing properties.",
+          "ingredients":"Olive oil, coconut oil, palm oil, lemon extract, lemon zest, water, sodium hydroxide.",
+          "price":3.99,
+          "category":1,
+          "image":"lemon-soap.jpg"
+       }
+    },
+    {
+       "pk":12,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360396",
+          "name":"Grapefruit",
+          "description":" Energize your day with the bright, citrusy fragrance of our Grapefruit Soap, perfect for a refreshing start.",
+          "ingredients":"Olive oil, coconut oil, palm oil, grapefruit extract, water, sodium hydroxide.",
+          "price":5.99,
+          "category":1,
+          "image":"grapefruit-soap.jpg"
+       }
+    },
+    {
+       "pk":13,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360397",
+          "name":"Nettle",
+          "description":"Our Nettle Soap harnesses the power of nettle to purify and soothe your skin, making it ideal for sensitive skin types.",
+          "ingredients":"Olive oil, coconut oil, palm oil, nettle extract, water, sodium hydroxide.",
+          "price":5.99,
+          "category":2,
+          "image":"nettle-soap.jpg"
+       }
+    },
+    {
+       "pk":14,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360398",
+          "name":"Olive Oil",
+          "description":"",
+          "ingredients":"",
+          "price":5.99,
+          "category":2,
+          "image":"olive-oil-soap.jpg"
+       }
+    },
+    {
+       "pk":15,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360399",
+          "name":"Green Tea",
+          "description":"Enjoy the antioxidant-rich properties of our Green Tea Soap, which helps to rejuvenate and protect your skin.",
+          "ingredients":"Olive oil, coconut oil, palm oil, green tea extract, water, sodium hydroxide.",
+          "price":5.99,
+          "category":1,
+          "image":"plant-soap.jpg"
+       }
+    },
+    {
+       "pk":16,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360400",
+          "name":"Raspberry",
+          "description":"Indulge in the sweet and tangy scent of our Raspberry Soap, offering a delightful and fruity cleanse for your skin.",
+          "ingredients":"Olive oil, coconut oil, palm oil, raspberry extract, water, sodium hydroxide.",
+          "price":2.99,
+          "category":3,
+          "image":"raspberry-soap.jpg"
+       }
+    },
+    {
+       "pk":17,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360401",
+          "name":"Savon du Marseille",
+          "description":"One of the most luxurious soaps ever made, highly recommended!",
+          "ingredients":"Olive oil, coconut oil, palm oil, water, sodium hydroxide.",
+          "price":9.99,
+          "category":2,
+          "image":"savon-du-marseille.jpg"
+       }
+    },
+    {
+       "pk":18,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360402",
+          "name":"Pear",
+          "description":"Delight in the sweet, juicy aroma of our Pear Soap, offering a gentle cleanse and a touch of fruity freshness.",
+          "ingredients":"Olive oil, coconut oil, palm oil, pear extract, water, sodium hydroxide.",
+          "price":6.99,
+          "category":1,
+          "image":"pear-soap.jpg"
+       }
+    },
+    {
+       "pk":19,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360403",
+          "name":"Cherry Blossom",
+          "description":"Embrace the delicate and enchanting fragrance of our Cherry Blossom Soap, perfect for a refreshing and floral bathing experience.",
+          "ingredients":"Olive oil, coconut oil, palm oil, cherry blossom extract, water, sodium hydroxide.",
+          "price":14.99,
+          "category":1,
+          "image":"cherry-blossom-soap.jpg"
+       }
+    },
+    {
+       "pk":20,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360404",
+          "name":"3 pack",
+          "description":"Indulge yorself with the 3 pack from heaven. Grapefruit, Lime and Rose.",
+          "ingredients":"",
+          "price":6.99,
+          "category":3,
+          "image":"pink-lime-rose-soap.jpg"
+       }
+    },
+    {
+       "pk":21,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360405",
+          "name":"6 pack",
+          "description":"Great little bundle of Lemon, Strawberry, Rose, Green Tea, Cherry and Lime",
+          "ingredients":"Lemon Soap: Olive oil, coconut oil, palm oil, lemon extract, lemon zest, water, sodium hydroxide. Strawberry Soap: Olive oil, coconut oil, palm oil, strawberry extract, water, sodium hydroxide. Rose Soap: Olive oil, coconut oil, palm oil, rose oil, rose petals, water, sodium hydroxide Green Tea Soap: Olive oil, coconut oil, palm oil, green tea extract, water, sodium hydroxide. Cherry Soap: Olive oil, coconut oil, palm oil, cherry extract, water, sodium hydroxide. Lime Soap: Olive oil, coconut oil, palm oil, lime extract, lime zest, water, sodium hydroxide.",
+          "price":15.99,
+          "category":1,
+          "image":"mix-soap.jpg"
+       }
+    },
+    {
+       "pk":22,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360406",
+          "name":"Blueberry and Raspberry 2 pack Florence",
+          "description":"Limited edition 2 pack from the famous French soap specialists.",
+          "ingredients":"Raspberry Soap: Olive oil, coconut oil, palm oil, raspberry extract, water, sodium hydroxide. Blueberry Soap: Olive oil, coconut oil, palm oil, blueberry extract, water, sodium hydroxide.",
+          "price":18.99,
+          "category":2,
+          "image":"pinkblue-soap.jpg"
+       }
+    },
+    {
+       "pk":23,
+       "model":"products.product",
+       "fields":{
+          "sku":"pp5003360407",
+          "name":"Soap Hamper Gift Set",
+          "description":"Perfect gift for all occassions. Fruit scented soaps including Strawberry, Pear, Avocado, Lemon and Lime.",
+          "ingredients":"Strawberry Soap: Olive oil, coconut oil, palm oil, strawberry extract, water, sodium hydroxide. Pear Soap: Olive oil, coconut oil, palm oil, pear extract, water, sodium hydroxide. Avocado Soap: Olive oil, coconut oil, palm oil, avocado oil, water, sodium hydroxide. Lemon Soap: Olive oil, coconut oil, palm oil, lemon extract, lemon zest, water, sodium hydroxide. Lime Soap: Olive oil, coconut oil, palm oil, lime extract, lime zest, water, sodium hydroxide.",
+          "price":29.99,
+          "category":2,
+          "image":"soap-hamper.jpg"
+       }
+    },
+    {
+        "pk":24,
+        "model":"products.product",
+        "fields":{
+           "sku":"pp5003360408",
+           "name":"24 Piece Deluxe Set",
+           "description":"Enjoy this premium set of 6 hand and 6 face lotions. Complemented by 12 of our finest original soaps",
+           "ingredients":"Hand Lotions: Water, glycerin, shea butter, aloe vera, emulsifying wax, essential oils (for scent), preservative. Face Lotions:Water, glycerin, hyaluronic acid, aloe vera, emulsifying wax, essential oils (for scent), preservative.Original Soap:Olive oil, coconut oil, palm oil, water, sodium hydroxide, essential oils (for scent), botanical extracts (for benefits).",
+           "price":49.99,
+           "category":2,
+           "image":"soap-prize.jpg"
+        }
+     }
+ ]
