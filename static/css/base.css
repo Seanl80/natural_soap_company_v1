@@ -61,6 +61,10 @@ p.text-muted {
     color: white;
 }
 
+.btn {
+    background-color: #6c757d;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
