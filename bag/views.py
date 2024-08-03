@@ -1,24 +1,67 @@
-from django.shortcuts import render, redirect
-
-# Create your views here.
+from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.conf import settings
+from products.models import Product
 
 def view_bag(request):
     """ A view that renders the bag contents page """
+    bag = request.session.get('bag', {})
+    bag_items = []
+    total = 0
+    product_count = 0
 
-    return render(request, 'bag/bag.html')
+    for item_id, quantity in bag.items():
+        product = Product.objects.get(id=item_id)
+        total += quantity * product.price
+        product_count += quantity
+        bag_items.append({
+            'product': product,
+            'quantity': quantity,
+        })
+
+    context = {
+        'bag_items': bag_items,
+        'total': total,
+        'product_count': product_count,
+    }
+
+    return render(request, 'bag/bag.html', context)
 
 def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
-
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
-    if item_id in list(bag.keys()):
+    if item_id in bag:
         bag[item_id] += quantity
     else:
         bag[item_id] = quantity
 
     request.session['bag'] = bag
     return redirect(redirect_url)
-    
+
+def adjust_bag(request, item_id):
+    """Adjust the quantity of the specified product to the specified amount"""
+    quantity = int(request.POST.get('quantity'))
+    bag = request.session.get('bag', {})
+
+    if quantity > 0:
+        bag[item_id] = quantity
+    else:
+        bag.pop(item_id)
+
+    request.session['bag'] = bag
+    return redirect(reverse('view_bag'))
+
+def remove_from_bag(request, item_id):
+    """Remove the item from the shopping bag"""
+    try:
+        bag = request.session.get('bag', {})
+
+        if item_id in bag:
+            bag.pop(item_id)
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+    except Exception as e:
+        return HttpResponse(status=500)
