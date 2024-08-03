@@ -43,6 +43,12 @@ p.text-muted {
     object-fit: cover;
 }
 
+.card-img-top-sb {
+    height: 300px;
+    width: 400px;
+    object-fit: fill;
+}
+
 .main-logo-link {
     width: fit-content;
 }
@@ -63,6 +69,7 @@ p.text-muted {
 
 .btn {
     background-color: #6c757d;
+    text-shadow: 1px 1px 1px black;
 }
 
 .shop-now-button:hover,
@@ -156,6 +163,9 @@ a.category-badge > span.badge:hover {
     .header-container {
         padding-top: 164px;
     }
+    .container {
+        max-width: 80%;
+      }
 }
 
 /* mobile nav bar on small screens */
@@ -173,7 +183,7 @@ a.category-badge > span.badge:hover {
 
 @media (max-width: 420px) {
     ul {
-        font-size: small;
+        font-size: 10px;
     }
     .header-container {
         padding-top: 116px;
