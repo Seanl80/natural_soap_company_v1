@@ -63,7 +63,10 @@ p.text-muted {
 
 .shop-now-button:hover,
 .shop-now-button:active,
-.shop-now-button:focus {
+.shop-now-button:focus,
+.btn:hover,
+.btn:active,
+.btn:focus {
     background: #222;
     color: white;
 }
