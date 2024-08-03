@@ -28,6 +28,10 @@ p {
     font-size: larger;
 }
 
+p.text-muted {
+    color: white;
+}
+
 .card-img-top {
     height: 200px;
     object-fit: cover;
