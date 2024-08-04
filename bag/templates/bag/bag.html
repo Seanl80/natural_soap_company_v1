@@ -12,7 +12,7 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container mt-2 mb-2 bg-white text-center rounded">
+    <div class="container mb-2 bg-white text-center rounded">
         <div class="row">
             <div class="col">
                 <h2 class="logo-font mt-3 mb-4">Shopping Bag</h2>
@@ -25,7 +25,7 @@
                 {% if bag_items %}
                     {% for item in bag_items %}
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                        <img class="card-img-top-sb img-fluid rounded" src="{{ item.product.image.url }}">
+                        <img class="card-img-top-sb img-fluid border-black rounded" src="{{ item.product.image.url }}">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 d-flex flex-column align-items-center justify-content-center">
                         <p><strong>{{ item.product.name }}</strong></p>
@@ -68,17 +68,18 @@
                                 </div>
                                 <div class="form-row justify-content-center w-100 mt-3">
                                     <div class="col text-center">
-                                        <p>£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                        <p>Sub total: £{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </div>
                                 </div>
                             </div>
+                            <hr class="border border-black border-3 opacity-75">
                         </form>
                     </div>
                     {% endfor %}
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="pt-5 col text-right">
+            <div class="col text-right">
                 <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
                 <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
                 <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
