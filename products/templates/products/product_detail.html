@@ -79,14 +79,14 @@
                         </div>
                         <div class="form-row">
                             <div class="col-12">
-                                <a href="{% url 'products' %}" class="btn border-black">
+                                <a href="{% url 'products' %}" class="btn border-black rounded-pill">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase text-white">Keep Shopping</span>
                                 </a>
                                 <a>
-                                <input type="submit" class="btn border-black text-uppercase text-white" value="Add to Bag">
+                                <input type="submit" class="btn border-black text-uppercase text-white rounded-pill" value="Add to Bag">
                                 </a>
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
