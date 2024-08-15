@@ -3,8 +3,10 @@
 {% block head_title %}
     {% trans "Email Address" %}
 {% endblock %}
-{% block content %}
-    <h1>{% trans "Email Address" %}</h1>
+{% block inner_content %}
+<hr class="border border-black border-3 opacity-75">
+<h2 class="logo-font mb-4">{% trans "E-mail address" %}</h2>
+<hr class="border border-black border-3 opacity-75">
     {% if emailaddresses %}
         {% if current_emailaddress %}
             <p>
