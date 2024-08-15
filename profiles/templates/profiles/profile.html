@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "templates/allauth/account/base.html" %}
 {% load static %}
 
 {% block extra_css %}
@@ -18,9 +18,10 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <hr>
+                <hr class="border border-black border-3 opacity-75">
                 <h2 class="logo-font mb-4">My Profile</h2>
-                <hr>
+                <hr class="border border-black border-3 opacity-75">
             </div>
         </div>
+        {{ profile }}
 {% endblock %}

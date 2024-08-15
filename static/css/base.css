@@ -252,12 +252,14 @@ a:hover {
 
 .allauth-form-inner-content p {
     justify-content: center;
-    border-radius: 8px;
     margin-top: 1.5rem; /* mt-4 */
     color: #ffffff; /* text-secondary */
 }
 
 .allauth-form-inner-content input {
+    width: 100%;
+    min-width: 200px;
+    box-sizing: border-box;
     justify-content: center;
     border-color: #000;
     border-radius: 0;
@@ -269,6 +271,7 @@ a:hover {
 
 .allauth-form-inner-content input::placeholder {
     color: #aab7c4;
+    font-size: small;
 }
 
 .allauth-form-inner-content button,
