@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3pfd)!al&9$)n_j*86zl-4yz8@s#=glw$w&0$kl*7=@c_qi1kb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-seanl80-naturalsoapcomp-n0zz1c68fd6.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-seanl80-naturalsoapcomp-2gi00pyims2.ws.codeinstitute-ide.net']
 
 
 # Application definition
