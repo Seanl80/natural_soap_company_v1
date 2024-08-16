@@ -25,7 +25,11 @@
                 {% if bag_items %}
                     {% for item in bag_items %}
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                        <img class="card-img-top-sb img-fluid border-black rounded" src="{{ item.product.image.url }}">
+                        {% if item.product.image %}
+                        <img class="card-img-top-sb img-fluid border-black rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                        {% else %}
+                        <img class="card-img-top-sb img-fluid border-black rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                        {% endif %}
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 d-flex flex-column align-items-center justify-content-center">
                         <p><strong>{{ item.product.name }}</strong></p>
