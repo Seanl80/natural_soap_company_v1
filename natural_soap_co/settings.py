@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3pfd)!al&9$)n_j*86zl-4yz8@s#=glw$w&0$kl*7=@c_qi1kb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-seanl80-naturalsoapcomp-2gi00pyims2.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-seanl80-naturalsoapcomp-yujt57bs1ae.ws.codeinstitute-ide.net']
 
 
 # Application definition
@@ -183,4 +183,4 @@ STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
-DEFAULT_FROM_EMAIL = 'naturalsoapcompany.example.com'
+DEFAULT_FROM_EMAIL = 'NaturalSoapCo.example.com'
