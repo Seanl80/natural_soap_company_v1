@@ -1,5 +1,5 @@
 html {
-    height: 100%;
+    min-height: 100vh;
 }
 
 body {
@@ -8,6 +8,7 @@ body {
     height: calc(100vh - 164px);
     font-family: 'Nunito';
 }
+
 
 /* from Bulma */
 .icon {
@@ -147,7 +148,6 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/* navbar */
 #topnav, #mobilenav, .dropdown-menu {
     background-color: #000 !important;
 }
@@ -183,6 +183,12 @@ a:hover {
 .footer-container {
     background-color: #000;
     justify-content: center;
+    width: 100%;
+    position: static;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
 }
 
 /* ------------------------------- bootstrap toasts */
@@ -359,15 +365,15 @@ a:hover {
 }
 
 .star-rating .star {
-    font-size: 2rem; /* Size of the stars */
-    color: #ddd; /* Default color */
+    font-size: 2rem;
+    color: #ddd;
     transition: color 0.2s ease-in-out;
 }
 
 .star-rating .star:hover,
 .star-rating .star.hovered,
 .star-rating .star.selected {
-    color: #f5b301; /* Color when hovered or selected */
+    color: #f5b301;
 }
 
 /* -------------------------------- Media Queries */
@@ -376,6 +382,9 @@ a:hover {
 @media (min-width: 1200px) {
   .container {
     max-width: 80%;
+  }
+  .header-container {
+    padding-top: 164px;
   }
 }
 
@@ -391,9 +400,6 @@ a:hover {
     .header-container {
         padding-top: 164px;
     }
-    .container {
-        max-width: 80%;
-      }
 }
 
 /* mobile nav bar on small screens */

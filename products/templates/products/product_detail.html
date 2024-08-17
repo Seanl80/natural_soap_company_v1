@@ -37,12 +37,6 @@
                         </span>
                     {% endif %}
                     <p class="lead mb-0 font-weight-bold text-white">£{{ product.price }}</p>
-                    {% if product.category %}
-                    <p class="small mt-1 mb-0">
-                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                            <i class="fas fa-tag mr-1 text-dark"></i>{{ product.category.friendly_name }}
-                        </a>
-                    {% endif %}
                     <p class="font-weight-bold text-white">{{ product.description }}</p>
                     <p class="font-weight-bold text-white">{{ product.ingredients }}</p>
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
@@ -103,8 +97,12 @@
                 {% if product.reviews.exists %}
                     <div class="reviews">
                         {% for review in product.reviews.all %}
-                            <div class="review text-white">
-                                <p>
+                            <div class="review p-3 mb-3 border border-light rounded {% if forloop.first %}mt-4{% endif %}">
+                                <p class="text-white">
+                                    <strong class="text-info">{{ review.user.username }}</strong>
+                                    <small class="text-muted">on {{ review.created_at|date:"F j, Y, g:i a" }}</small>
+                                </p>
+                                <p class="text-warning">
                                     Rating: 
                                     {% if review.rating %}
                                         {{ review.rating }} / 5
@@ -112,8 +110,11 @@
                                         No Rating
                                     {% endif %}
                                 </p>
-                                <p>{{ review.comment }}</p>
+                                <p class="text-white">{{ review.comment }}</p>
                             </div>
+                            {% if not forloop.last %}
+                                <hr class="w-75 mx-auto">
+                            {% endif %}
                         {% endfor %}
                     </div>
                 {% else %}
@@ -125,6 +126,8 @@
             </div>
         </div>
     </div>
+    
+    
 {% endblock %}
 
 {% block postloadjs %}

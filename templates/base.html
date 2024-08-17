@@ -139,52 +139,52 @@
     {% block content %}
     {% endblock %}
 
-    <footer>
-        <div class="container-fluid footer-container mt-5">
-            <div class="row">
-                <div class="col-12 col-sm-4 text-center text-sm-left mb-2 mb-sm-0">
-                    <small class="f-text text-white">
-                        &copy; Copyright 2024
-                    </small>
-                </div>
-                
-                <div class="col-12 col-sm-4 text-center mb-2 mb-sm-0">
-                    <ul class="list-inline">
-                        <li class="list-inline-item social-link">
-                            <a href="https://www.facebook.com" target="_blank">
-                                <i aria-hidden="true" class="fa-brands fa-square-facebook"></i>
-                                <span class="fa-sr-only">Facebook</span>
-                            </a>
-                        </li>
-                        <li class="list-inline-item social-link">
-                            <a href="https://twitter.com/fontawesome" target="_blank">
-                                <i aria-hidden="true" class="fa-brands fa-square-x-twitter"></i>
-                                <span class="fa-sr-only">X</span>
-                            </a>
-                        </li>
-                        <li class="list-inline-item social-link">
-                            <a href="https://www.instagram.com" target="_blank">
-                                <i aria-hidden="true" class="fa-brands fa-square-instagram"></i>
-                                <span class="fa-sr-only">Instagram</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="col-12 col-sm-4 text-center text-sm-right">
-                    <small class="vertical-align-middle text-white">
-                        Created by Sean Littlewood for fun educational purposes only.
-                    </small>
-                </div>
+<footer>
+    <div class="container-fluid footer-container">
+        <div class="row width-100">
+            <div class="col-12 col-sm-4 text-center text-sm-left mb-2 mb-sm-0">
+                <small class="f-text text-white">
+                    &copy; Copyright 2024
+                </small>
+            </div>
+            
+            <div class="col-12 col-sm-4 text-center mb-2 mb-sm-0">
+                <ul class="list-inline">
+                    <li class="list-inline-item social-link">
+                        <a href="https://www.facebook.com" target="_blank">
+                            <i aria-hidden="true" class="fa-brands fa-square-facebook"></i>
+                            <span class="fa-sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item social-link">
+                        <a href="https://twitter.com/fontawesome" target="_blank">
+                            <i aria-hidden="true" class="fa-brands fa-square-x-twitter"></i>
+                            <span class="fa-sr-only">X</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item social-link">
+                        <a href="https://www.instagram.com" target="_blank">
+                            <i aria-hidden="true" class="fa-brands fa-square-instagram"></i>
+                            <span class="fa-sr-only">Instagram</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="col-12 col-sm-4 text-center text-sm-right">
+                <small class="vertical-align-middle text-white">
+                    Created by Sean Littlewood for fun educational purposes only.
+                </small>
             </div>
         </div>
-    </footer>
-    
-    {% block postloadjs %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
-    {% endblock %}
+    </div>
+</footer>
+
+{% block postloadjs %}
+<script type="text/javascript">
+    $('.toast').toast('show');
+</script>
+{% endblock %}
 
     
   </body>
