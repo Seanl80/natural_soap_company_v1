@@ -1,5 +1,5 @@
 html {
-    min-height: 100vh;
+    height: 100%;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
 }
 
 p {
-    font-size: larger;
+    font-size: medium;
 }
 
 p.text-muted {
@@ -180,11 +180,15 @@ a:hover {
     color: #6c757d;
 }
 
+.main-container {
+    padding-bottom: 150px;
+}
+
 .footer-container {
     background-color: #000;
     justify-content: center;
     width: 100%;
-    position: static;
+    position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
@@ -435,6 +439,9 @@ a:hover {
 
 /* keep top nav in line */
 @media (max-width: 420px) {
+    p.my-0 {
+        font-size: 10px;
+    }
     ul, a.dropdown-item {
         font-size: 10px;
     }
