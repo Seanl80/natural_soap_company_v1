@@ -343,6 +343,33 @@ a:hover {
     border-radius: 0;
 }
 
+.review-btn{
+    width: 150px;
+}
+
+.form-control {
+    width: 100%;
+    max-width: 600px;
+}
+
+.star-rating {
+    display: inline-flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.star-rating .star {
+    font-size: 2rem; /* Size of the stars */
+    color: #ddd; /* Default color */
+    transition: color 0.2s ease-in-out;
+}
+
+.star-rating .star:hover,
+.star-rating .star.hovered,
+.star-rating .star.selected {
+    color: #f5b301; /* Color when hovered or selected */
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

@@ -72,7 +72,17 @@
                                             </p>
                                             {% endif %}
                                             {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                            <div class="star-rating">
+                                                {% for i in star_range %}
+                                                    {% if product.rating > i %}
+                                                        <span class="star">&#9733;</span>
+                                                    {% else %}
+                                                        <span class="star">&#9734;</span>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                            
+                                            </div>
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}

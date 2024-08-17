@@ -44,7 +44,15 @@
                     </p>
                     {% endif %}
                     {% if product.rating %}
-                        <small class="text-muted text-white"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                    <div class="star-rating">
+                        {% for i in star_range %}
+                            {% if product.rating > i %}
+                                <span class="star">&#9733;</span>
+                            {% else %}
+                                <span class="star">&#9734;</span>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
                     {% else %}
                         <small class="text-muted text-white">No Rating</small>
                     {% endif %}
@@ -102,6 +110,22 @@
             </div>
         </div>
     </div>
+    <div class="container bg-dark d-flex flex-column align-items-center justify-content-center text-center">
+        <div class="row w-100 mb-4">
+            <div class="col text-center">
+                {% if product.review %}
+                    <small class="text-white">{% include 'reviews/product_reviews.html' with product=product %}</small>
+                {% else %}
+                    <small class="text-white">No Reviews Yet</small>
+                {% endif %}
+                <a href="{% url 'add_review' product.id %}" class="btn review-btn rounded-pill text-white mt-3 d-block mx-auto">
+                    Add a Review
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
 {% endblock %}
 {% block postloadjs %}
 {{ block.super }}

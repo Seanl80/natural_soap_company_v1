@@ -137,3 +137,11 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+def product_list(request):
+    products = Product.objects.all()
+    context = {
+        'products': products,
+        'star_range': range(5)
+    }
+    return render(request, 'products/products.html', context)

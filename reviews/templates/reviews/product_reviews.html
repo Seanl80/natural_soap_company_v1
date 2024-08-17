@@ -1,0 +1,11 @@
+<h2>Reviews for {{ product.name }}</h2>
+{% for review in reviews %}
+    <div>
+        <strong>{{ review.user.username }}</strong>
+        <p>Rating: {{ review.rating }}/5</p>
+        <p>{{ review.comment }}</p>
+        <small>{{ review.created_at }}</small>
+    </div>
+{% empty %}
+    <p>No reviews yet. Be the first to review this product!</p>
+{% endfor %}

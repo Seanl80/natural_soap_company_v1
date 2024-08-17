@@ -23,8 +23,15 @@ class Product(models.Model):
     description = models.TextField()
     ingredients = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)  # Average rating
     image = models.ImageField(null=True, blank=True)
+
+    def update_rating(self):
+        reviews = self.reviews.all()
+        if reviews.exists():
+            average = sum(review.rating for review in reviews) / reviews.count()
+            self.rating = round(average, 2)
+            self.save()
 
     def __str__(self):
         return self.name
