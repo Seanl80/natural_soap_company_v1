@@ -180,6 +180,11 @@ a:hover {
     color: #6c757d;
 }
 
+.footer-container {
+    background-color: #000;
+    justify-content: center;
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -380,6 +385,7 @@ a:hover {
 /* to keep quantity box in a line */
 @media (max-width: 930px) and (min-width: 760px), (max-width: 440px) {
     .input-group {
+        justify-content: center;
         flex-direction: row;
     }
 }
