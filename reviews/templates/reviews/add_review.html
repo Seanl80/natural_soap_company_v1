@@ -23,9 +23,6 @@
         <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center text-white">
             <form method="POST" action="{% url 'add_review' product.id %}">
                 {% csrf_token %}
-                
-                <form method="POST" action="{% url 'add_review' product.id %}">
-                    {% csrf_token %}
                     
                     <div class="form-group">
                         <label for="rating" class="text-white">Rating</label>
