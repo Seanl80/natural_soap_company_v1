@@ -1,1 +1,1 @@
-web: gunicorn natural_soap_co.wsgi.application
+web: gunicorn natural_soap_co.wsgi:application
