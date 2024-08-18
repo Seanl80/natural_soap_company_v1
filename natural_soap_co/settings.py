@@ -28,7 +28,11 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['natural-soap-company.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = [
+    'natural-soap-company.herokuapp.com',
+    'localhost',
+    '8000-seanl80-naturalsoapcomp-yujt57bs1ae.ws.codeinstitute-ide.net',
+    ]
 
 
 # Application definition
