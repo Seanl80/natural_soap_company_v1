@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container bg-dark d-flex flex-column align-items-center justify-content-center text-center pb-5">
+    <div class="row w-100 mb-4">
+        <hr>
+        <h2 class="logo-font mb-4 text-white">Your Wishlist</h2>
+        <hr>
+    </div>
+    {% if wishlist_items %}
+        <div class="row">
+            {% for item in wishlist_items %}
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">{{ item.product.name }}</h5>
+                            <p class="card-text">£{{ item.product.price }}</p>
+                            <a href="{% url 'remove_from_wishlist' item.product.id %}" class="btn rounded-pill text-white">Remove</a>
+                            <a href="{% url 'product_detail' item.product.id %}" class="btn rounded-pill text-white">View Product</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-white">You have no items in your wishlist.</p>
+    {% endif %}
+</div>
+{% endblock %}
