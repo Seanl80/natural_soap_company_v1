@@ -1,1 +1,1 @@
-Boutique Ado Confirmation for Order Number {{ order.order_number }}
+This is the Natural Soap Company Confirmation for Order Number {{ order.order_number }}
