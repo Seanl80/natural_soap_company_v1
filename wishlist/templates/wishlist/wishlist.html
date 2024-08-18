@@ -11,16 +11,18 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container bg-dark d-flex flex-column align-items-center justify-content-center text-center pb-5">
+<div class="container main-container bg-dark d-flex flex-column">
     <div class="row w-100 mb-4">
-        <hr>
-        <h2 class="logo-font mb-4 text-white">Your Wishlist</h2>
-        <hr>
+        <div class="col">
+            <hr class="border border-black border-3 opacity-75">
+            <h2 class="logo-font mb-4 text-white text-center">Your Wishlist</h2>
+            <hr class="border border-black border-3 opacity-75">
+        </div>
     </div>
     {% if wishlist_items %}
         <div class="row">
             {% for item in wishlist_items %}
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card">
                         <img class="card-img-top" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                         <div class="card-body text-center">

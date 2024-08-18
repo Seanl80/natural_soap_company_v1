@@ -116,6 +116,12 @@
                                 {% endif %}
                             </p>
                             <p class="text-white">{{ review.comment }}</p>
+                            {% if user == review.user %}
+                            <div class="mt-2">
+                                <a class="text-info" href="{% url 'edit_review' review.id %}">Edit</a> | 
+                                <a class="text-danger" href="{% url 'delete_review' review.id %}">Delete</a>
+                            </div>
+                        {% endif %}
                         </div>
                         {% if not forloop.last %}
                             <hr class="w-75 mx-auto">
