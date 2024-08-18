@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
-    'natural-soap-company-v1.herokuapp.com',
+    'natural-soap-company-v1-33f8559d9f2f.herokuapp.com/',
     'localhost',
     '8000-seanl80-naturalsoapcomp-yujt57bs1ae.ws.codeinstitute-ide.net',
     ]
