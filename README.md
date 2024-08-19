@@ -7,20 +7,27 @@ The Natural Soap Company is a newly formed company with the aim of selling soaps
 
 ## Developer goals
 
-- I would like to build a website which is easy to navigate through and use.
-- I would like to make the user able to have their own profile for when they use the website.
-- I would like to allow users the ability to create, display, edit and delete reviews.
-- I would like to develop a database structure which will allow for previous orders, wishlists, delivery info to be stored securely.
-- I would like for superusers to be able to create, display, edit and delete products to sell.
-
-## User goals
-
-
+As a Developer, I would like:
+- to build a website which is easy to navigate through and use.
+- to make the user able to have their own profile for when they use the website.
+- to allow users the ability to create, display, edit and delete reviews.
+- develop a database structure which will allow for previous orders, wishlists, delivery info to be stored securely.
+- for superusers to be able to create, display, edit and delete products to sell.
 
 ## User stories
 
 As a user of this website, I want:
-
+- to browse products easily without the need to sign in.
+- to add items to my cart to see how much everything I wanted would cost.
+- to be able to read reviews on the products before I buy them.
+- to feel that your website is secure.
+- the sign up process to be easy to understand.
+- acknowledgement that I have made an account with you.
+- the buying process to be quick and straight forward.
+- acknowledgement that I have made a purchase from you.
+- to be able to view my past orders.
+- to be able to ammend my details if needed.
+- to be able to make a list of items I would like to buy in the future.
 
 
 ---
@@ -29,11 +36,14 @@ As a user of this website, I want:
 
 - The basic colour range for this website are with the following colours :-
 - ![#ffffff](https://placehold.co/15x15/ffffff/ffffff.png) `#ffffff`
-- ![#000000](https://placehold.co/15x15/455a64/455a64.png) `#000000`
-- ![#6c757d](https://placehold.co/15x15/00c853/00c853.png) `#6c757d`
-- ![#ff007b](https://placehold.co/15x15/000000de/000000de.png) `#ff007b`
+- ![#000000](https://placehold.co/15x15/000000/000000.png) `#000000`
+- ![#6c757d](https://placehold.co/15x15/6c757d/6c757d.png) `#6c757d`
+- ![#ff007b](https://placehold.co/15x15/ff007b/ff007b.png) `#ff007b`
 
-
+I felt these were a vibrant contrast to my beige background picture.
+I also tried to create shapes of soap bars within my website i.e. 
+like the blurred background of the text and the square boxes of the forms and the product cards.
+I felt the rounded edges of the buttons and lowercase within the buttons felt more relaxed like the products.
 
 
 ---
@@ -58,11 +68,27 @@ As a user of this website, I want:
 
 ## Testing Developer Goals
 
-
+As a Developer, I would like:
+- to build a website which is easy to navigate through and use.
+- to make the user able to have their own profile for when they use the website.
+- to allow users the ability to create, display, edit and delete reviews.
+- develop a database structure which will allow for previous orders, wishlists, delivery info to be stored securely.
+- for superusers to be able to create, display, edit and delete products to sell.
 
 ## Testing User Stories
 
-
+As a user of this website, I want:
+- to browse products easily without the need to sign in.
+- to add items to my cart to see how much everything I wanted would cost.
+- to be able to read reviews on the products before I buy them.
+- to feel that your website is secure.
+- the sign up process to be easy to understand.
+- acknowledgement that I have made an account with you.
+- the buying process to be quick and straight forward.
+- acknowledgement that I have made a purchase from you.
+- to be able to view my past orders.
+- to be able to ammend my details if needed.
+- to be able to make a list of items I would like to buy in the future.
 
 ---
 
