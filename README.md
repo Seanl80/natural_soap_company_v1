@@ -1,10 +1,17 @@
 # Natural Soap Company
 
- 
+[Link to Natural Soap Co. live site](https://natural-soap-company-v1-33f8559d9f2f.herokuapp.com/)
+
+This is my Milestone 4 project based around a fictional company.
+The Natural Soap Company is a newly formed company with the aim of selling soaps free from harmful chemicals to customers of all ages who think like us on how soap should be made. It's website has been created using a postgreSQL database. It's made using lanuages like JavaScript and Python. Bootstrap has been used for a structured layout and Stripe used for payments.
 
 ## Developer goals
 
-
+- I would like to build a website which is easy to navigate through and use.
+- I would like to make the user able to have their own profile for when they use the website.
+- I would like to allow users the ability to create, display, edit and delete reviews.
+- I would like to develop a database structure which will allow for previous orders, wishlists, delivery info to be stored securely.
+- I would like for superusers to be able to create, display, edit and delete products to sell.
 
 ## User goals
 
@@ -151,7 +158,7 @@ This project has used code from the Boutique Ado walkthrough as the basic struct
 
 ### Media
 
-- For my image I used [Pixabay](https://www.pixabay.com/).
-- For my favicon image I used [Icon Archive](https://www.iconarchive.com/show/sleek-xp-basic-icons-by-hopstarter/Money-icon.html).
+- For my images I used [Pixabay](https://www.pixabay.com/).
+- For my favicon image I used [Icon Archive](https://www.iconarchive.com/).
 - To show my website on different screens I used [Am I responsive](https://ui.dev/amiresponsive/) to create them.
 - For my wireframes I used [Balsamiq](https://balsamiq.com/).
