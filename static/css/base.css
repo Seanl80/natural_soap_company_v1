@@ -31,7 +31,7 @@ p {
 }
 
 p.text-muted {
-    color: white;
+    color: #ffffff;
 }
 
 .main-logo-link {
@@ -39,12 +39,12 @@ p.text-muted {
 }
 
 .content {
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 1px #000000;
     backdrop-filter: blur(50px);
 }
 
 .dropdown-item {
-    color: white;
+    color: #ffffff;
 }
 
 /* images */
@@ -89,13 +89,13 @@ p.text-muted {
 
 /* buttons */
 .shop-now-button {
-    color: white;
+    color: #ffffff;
     min-width: 200px;
 }
 
 .btn {
     background-color: #6c757d;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 1px #000000;
 }
 
 .shop-now-button:hover,
@@ -104,12 +104,12 @@ p.text-muted {
 .btn:hover,
 .btn:active,
 .btn:focus {
-    background: #222;
-    color: white;
+    background: #000000;
+    color: #ffffff;
 }
 
 a.category-badge > span.badge:hover {
-    background: #212529 !important;
+    background: #000000 !important;
     color: #fff !important;
 }
 
@@ -134,12 +134,12 @@ a.category-badge > span.badge:hover {
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid #000000 !important;
 }
 
 i,
 .my-0 {
-    color: white;
+    color: #ffffff;
 }
 
 ul {
@@ -210,7 +210,7 @@ a {
     height: 0; 
     border-left: 4px solid transparent;
     border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
+    border-bottom: 10px solid #000000;
     position: absolute;
     top: -10px;
     right: 36px;
@@ -307,7 +307,7 @@ a {
 .allauth-form-inner-content a.btn:hover,
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
-	color: white;
+	color: #ffffff;
     background: #222;
     border-color: #222;
     text-decoration: none;
