@@ -3,7 +3,6 @@ html {
 }
 
 body {
-    background: url('/media/hero-soap.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     font-family: 'Nunito';
@@ -30,10 +29,6 @@ p {
     font-size: medium;
 }
 
-p.text-muted {
-    color: #ffffff;
-}
-
 .main-logo-link {
     width: fit-content;
 }
@@ -48,13 +43,24 @@ p.text-muted {
 }
 
 /* images */
-.overlay {
+
+.home-hero {
 	height: 100%;
 	width: 100%;
 	top: 0;
 	left: 0;
 	position: fixed;
 	background: url('/media/hero-soap.jpg') no-repeat center center fixed;
+	z-index: -1;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background-color: darkblue;
 	z-index: -1;
 }
 
