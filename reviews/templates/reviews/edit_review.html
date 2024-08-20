@@ -11,7 +11,7 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container main-container bg-dark d-flex flex-column align-items-center justify-content-center text-center pb-5">
+<div class="container main-container d-flex flex-column align-items-center justify-content-center text-center pb-5">
     <div class="row w-100 mb-4">
         <div class="col">
             <hr class="border border-black border-3 opacity-75">
@@ -19,45 +19,52 @@
             <hr class="border border-black border-3 opacity-75">
         </div>
     </div>
-    <div class="text=center">
+    <div class="text-center">
         <h2 class="text-white">Edit a Review for {{ review.product.name }}</h2>
     </div>
-    <div class="text=center">
+    <div class="text-center">
         <form method="POST" action="{% url 'edit_review' review.id %}">
             {% csrf_token %}
-            {{ form.as_p }}
-                <div class="form-group">
-                    <label for="rating" class="text-white">Rating</label>
-                    <div class="star-rating" id="starRating">
-                        <span class="star" data-value="1">&#9733;</span>
-                        <span class="star" data-value="2">&#9733;</span>
-                        <span class="star" data-value="3">&#9733;</span>
-                        <span class="star" data-value="4">&#9733;</span>
-                        <span class="star" data-value="5">&#9733;</span>
-                        <input type="hidden" name="rating" id="ratingValue" value="0">
-                    </div>
-                </div>
             <div class="form-group">
+                <label for="rating" class="text-white">Rating</label>
+                <div class="star-rating" id="starRating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                    <input type="hidden" name="rating" id="ratingValue" value="{{ form.rating.value }}">
+                </div>
+            </div>
+            <div class="form-group d-flex flex-column align-items-center justify-content-center text-center">
                 <label for="id_comment" class="text-white">Comment</label>
-                <textarea class="form-control" id="id_comment" name="comment" rows="4" required></textarea>
+                {{ form.comment }}
             </div>
             <a href="javascript:history.back()" class="btn rounded-pill text-white mt-3">Cancel</a>
             <button type="submit" class="btn rounded-pill text-white mt-3">Update Review</button>
-        </form>  
+        </form>
     </div>            
 </div>
 {% endblock %}
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
     document.addEventListener('DOMContentLoaded', function () {
         const stars = document.querySelectorAll('.star-rating .star');
         const ratingValue = document.getElementById('ratingValue');
-
+    
+        const initialRating = parseInt(ratingValue.value);
+        if (initialRating > 0) {
+            stars.forEach((star, index) => {
+                if (index < initialRating) {
+                    star.classList.add('selected');
+                }
+            });
+        }
+    
         stars.forEach((star, index) => {
             star.addEventListener('mouseover', () => {
-                // Light up all stars up to and including the hovered star
                 stars.forEach((s, i) => {
                     if (i <= index) {
                         s.classList.add('hovered');
@@ -66,17 +73,13 @@
                     }
                 });
             });
-
+    
             star.addEventListener('mouseout', () => {
-                // Remove the hover effect when not hovering
                 stars.forEach(s => s.classList.remove('hovered'));
             });
-
+    
             star.addEventListener('click', () => {
-                // Set the selected rating
                 ratingValue.value = star.getAttribute('data-value');
-                
-                // Light up all stars up to and including the selected star
                 stars.forEach((s, i) => {
                     if (i <= index) {
                         s.classList.add('selected');
@@ -89,4 +92,3 @@
     });
     </script>
 {% endblock %}
-
