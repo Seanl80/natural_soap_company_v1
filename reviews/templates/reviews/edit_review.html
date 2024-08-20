@@ -23,7 +23,7 @@
         <h2 class="text-white">Edit a Review for {{ review.product.name }}</h2>
     </div>
     <div class="text=center">
-        <form method="POST" action="{% url 'add_review' product.id %}">
+        <form method="POST" action="{% url 'edit_review' review.id %}">
             {% csrf_token %}
                 <div class="form-group">
                     <label for="rating" class="text-white">Rating</label>
