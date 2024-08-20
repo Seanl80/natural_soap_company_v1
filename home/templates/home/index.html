@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container pb-5">
+    <div class="container header-container pb-3">
         <div class="row">
             <div class="col"></div>
         </div>
@@ -11,29 +11,31 @@
 
 {% block content %}
 <div class="home-hero"></div>
-<div class="container-fluid main-container">
+<div class="container-fluid main-container pt-3">
     <div class="row justify-content-center">
         <div class="col-12 col-md-7 col-lg-6 text-center"> 
-            <h1 class="font-weight-bold text-white h1head rounded-circle">
-                Welcome to the Natural Soap Company! Your one stop shop for natural ingredient soaps!
-            </h1>
-            <div class="my-5">
-                <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-pill py-3 pulse">
-                    Shop Now
-                </a>
-            </div>
-            <div>
-		        <p class="content lead font-weight-bold mt-5 text-white rounded-circle">
-                    Did you know that soap making has been around for ever! 
-                    Evidence has been found that ancient Babylonians understood soap making as early as 2800 BC. 
-                    Everyone from the Egyptians to the Romans and all the way to us now have used soap.
-		        </p>
-		        <p class="content lead font-weight-bold text-white rounded-circle">
-                    As the best UK supplier for natural soaps we aim to always have soaps that will be kinder and gentler 
-                    on your body to avoid irrataions and leave your body feeling smooth, soft and well nourished. You won't 
-                    find any nasty chemicals in our soaps, they are made with 100% natural origin ingredients and free from 
-                    things like parabens and SLS, which are known to cause irritation.
-		        </p>
+            <div class="content">
+                <h1 class="font-weight-bold text-white h1head pt-3">
+                    Welcome to the Natural Soap Company! Your one-stop shop for natural ingredient soaps!
+                </h1>
+                <div class="my-5">
+                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-pill py-3 pulse">
+                        Shop Now
+                    </a>
+                </div>
+                <div>
+                    <p class="lead font-weight-bold text-white p-3">
+                        Did you know that soap making has been around forever! Evidence has been found that ancient Babylonians 
+                        understood soap making as early as 2800 BC. Everyone from the Egyptians to the Romans and all the way to 
+                        us now have used soap.
+                    </p>
+                    <p class="lead font-weight-bold text-white p-3">
+                        As the best UK supplier of natural soaps, we aim to always have soaps that will be kinder and gentler on 
+                        your body to avoid irritations and leave your body feeling smooth, soft, and well-nourished. You won't 
+                        find any nasty chemicals in our soaps; they are made with 100% natural origin ingredients and free from 
+                        things like parabens and SLS, which are known to cause irritation.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
