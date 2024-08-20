@@ -20,7 +20,7 @@
         </div>
     </div>
     <div class="text=center">
-        <h2 class="text-white">Add a Review for {{ product.name }}</h2>
+        <h2 class="text-white">Edit a Review for {{ review.product.name }}</h2>
     </div>
     <div class="text=center">
         <form method="POST" action="{% url 'add_review' product.id %}">

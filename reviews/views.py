@@ -37,7 +37,7 @@ def edit_review(request, review_id):
     else:
         form = ReviewForm(instance=review)
 
-    return render(request, 'reviews/edit_review.html', {'form': form})
+    return render(request, 'reviews/edit_review.html', {'form': form, 'review': review})
 
 
 @login_required
