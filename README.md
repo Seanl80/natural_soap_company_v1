@@ -46,6 +46,7 @@ As a user of this website, I want:
 I felt these were a vibrant contrast to my beige background picture.
 Originally I had my home page background picture displayed throughout the website but, especially with the pages that had images, I felt this clashed with my content so decided to go for a dark plain colour so I could let my content stand out more cleanly. 
 I felt the rounded edges of the buttons and lowercase within the buttons felt more relaxed like the products.
+The toasts I kept a white background on so they would stand out as I have a timer for how long they appear for.
 
 
 ---
@@ -98,17 +99,42 @@ As a Developer, I would like:
 ## Testing User Stories
 
 As a user of this website, I want:
-- to browse products easily without the need to sign in.
-- to add items to my cart to see how much everything I wanted would cost.
-- to be able to read reviews on the products before I buy them.
-- to feel that your website is secure.
-- the sign up process to be easy to understand.
-- acknowledgement that I have made an account with you.
-- the buying process to be quick and straight forward.
-- acknowledgement that I have made a purchase from you.
-- to be able to view my past orders.
-- to be able to ammend my details if needed.
-- to be able to make a list of items I would like to buy in the future.
+1. to browse products easily without the need to sign in.
+- from the home page you can jump straight into view products either from the shop now button or choosing a category.
+![Viewing products](docs/images/view-products.png)
+2. to add items to my cart to see how much everything I wanted would cost.
+- the cart structure is easy to understand and see how much your grand total would be.
+![Cart order price](docs/images/checkout-price.png)
+3. to be able to read reviews on the products before I buy them.
+- on each product detail page a review section has been added to allow users to read reviews before buying them with or without signing in.
+![Reviews](docs/images/reviews.png)
+4. to feel that your website is secure.
+- on my toast pop up and the checkout screen I felt it was important to use the word secure to put users at ease of potential fears.
+![Secure toast message](docs/images/secure-ch-1.png)
+![Secure checkout](docs/images/secure-ch-2.png)
+5. the sign up process to be easy to understand.
+- everything here is labelled and navigation clear to understand. If corrections are needed its stated clearly.
+![Sign up](docs/images/sign-up.png)
+![Sign up corrections](docs/images/sign-up-corrections.png)
+6. acknowledgement that I have made an account with you.
+- users will recieve a confirmation email after a sign up which will require user to verify their email by clicking the provided link.
+![Verify email](docs/images/verify-email.png)
+![Confirm sign up](docs/images/sign-up-confirm.png)
+7. the buying process to be quick and straight forward.
+- after viewing the cart its just a case of filling out details (if you are a new user) if not details can be saved and boxes prepopulated. Then it is one more button click for the purchase. You can also click directly from the toast pop up but it points to the cart icon if you don't click on the toast button this is again to aid with navigation.
+![Toast checkout](docs/images/buy-process1.png)
+![Cart checkout](docs/images/buy-process2.png)
+8. acknowledgement that I have made a purchase from you.
+- there is two confirmations. Firstly on screen you will see an order confirmation stating what you have bought and the price you have been charged. Then secondly customer will recieve an email with the same info of what has been bought and how much was paid.
+![Order confirmation](docs/images/order-confirm.png)
+![Email confirmation](docs/images/order-confirm-email.png)
+9. to be able to ammend my details and to be able to view my past orders.
+- thi can be done easily from the My Profile screen where details are stored and past orders are listed and can be clicked to view full details.
+![Ammending details and Past orders](docs/images/edit-past-orders.png)
+10. to be able to make a list of items I would like to buy in the future.
+- the wishlist is a great way for product short cuts and to keep potential buys in a personal space for future use.
+![viewing products](docs/images/wishlist1.png)
+![viewing products](docs/images/wishlist2.png)
 
 ---
 
