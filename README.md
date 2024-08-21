@@ -2,7 +2,7 @@
 
 [Link to Natural Soap Co. live site](https://natural-soap-company-v1-33f8559d9f2f.herokuapp.com/)
 
-[Responsive images of Natural Soap Company website]()
+![Responsive images of Natural Soap Company website](docs/images/responsive-images.png)
 
 This is my Milestone 4 project based around a fictional company.
 The Natural Soap Company is a newly formed company with the aim of selling soaps free from harmful chemicals to customers of all ages who think like us on how soap should be made. It's website has been created using a postgreSQL database. It's made using lanuages like JavaScript and Python. Bootstrap has been used for a structured layout and Stripe used for payments.
