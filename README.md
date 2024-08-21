@@ -2,6 +2,8 @@
 
 [Link to Natural Soap Co. live site](https://natural-soap-company-v1-33f8559d9f2f.herokuapp.com/)
 
+[Responsive images of Natural Soap Company website]()
+
 This is my Milestone 4 project based around a fictional company.
 The Natural Soap Company is a newly formed company with the aim of selling soaps free from harmful chemicals to customers of all ages who think like us on how soap should be made. It's website has been created using a postgreSQL database. It's made using lanuages like JavaScript and Python. Bootstrap has been used for a structured layout and Stripe used for payments.
 
@@ -34,7 +36,8 @@ As a user of this website, I want:
 
 ## Design choices
 
-- The basic colour range for this website are with the following colours :-
+The basic colour range for this website are with the following colours :
+
 - ![#ffffff](https://placehold.co/15x15/ffffff/ffffff.png) `#ffffff`
 - ![#000000](https://placehold.co/15x15/000000/000000.png) `#000000`
 - ![#6c757d](https://placehold.co/15x15/6c757d/6c757d.png) `#6c757d`
@@ -57,27 +60,33 @@ The toasts I kept a white background on so they would stand out as I have a time
 
 Here are the original wireframes:
 I have made the nine main pages of the site.
-- Home page consists of an explanation of the site with navigation and shop now button. There will be icons in the navbar to login/register and a basket total.
-- The Products page will consist of rectangler cards showing the different products with their images and prices.
-- The Product details page will show a larger image and a more in depth description with a review section below.
-- The Wishlist page will show rectangular cards again with image and price with buttons to remove from wishlist or go to product details page.
-- The Basket page will contain a large image, product info and clear pricing and a total. There is buttons to make a choice whether to buy and go to checkout or to continue shopping.
-- The Checkout page will be a similar layout to the basket page but will ask for customer details and a permission check to store this info.
-- The Checkout success page will consist of an order confirmation the order was successful stating what was bought.
-- The Register page will be the base for all form pages with content being centered with white input boxes clearly labelled.
-- The Sign in page will be the base for my sign out page to keep things consistent again with clearly labelled white input boxes.
+- The <strong>Home page</strong> consists of an explanation of the site with navigation and shop now button. There will be icons in the navbar to <strong>login/register</strong> and a basket total.
+- The <strong>Products page</strong> will consist of rectangler cards showing the different products with their images and prices.
+- The <strong>Product details</strong> page will show a larger image and a more in depth description with a review section below.
+- The <strong>Wishlist page</strong> will show rectangular cards again with image and price with buttons to remove from wishlist or go to product details page.
+- The <strong>Basket page</strong> will contain a large image, product info and clear pricing and a total. There is buttons to make a choice whether to buy and go to checkout or to continue shopping.
+- The <strong>Checkout page</strong> will be a similar layout to the basket page but will ask for customer details and a permission check to store this info.
+- The <strong>Checkout success page</strong> will consist of an order confirmation the order was successful stating what was bought.
+- The <strong>Register page</strong> will be the base for all form pages with content being centered with white input boxes clearly labelled.
+- The <strong>Sign in page</strong> will be the base for my sign out page to keep things consistent again with clearly labelled white input boxes.
 
 
 ---
 
 ## Technologies used
 
-- For this website I have chosen to use HTML, CSS and JavaScript.
-- I have also used Python and Postgresql.
-- I have also included Bootstrap, Font Awesome and Stripe.
-- Gitpod was used as my IDE.
-- GitHub was used to store my code.
-- Heroku was used to deploy the website.
+For this website I have chosen to use: 
+- <strong>HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong>
+- <strong>Python</strong> and <strong>Postgresql</strong>
+
+As well as:
+- [Bootstrap](https://getbootstrap.com/) for structure and layout
+- [FontAwesome](https://fontawesome.com/) for icons
+- [Stripe](https://stripe.com/gb) for payments
+- [Gitpod](https://www.gitpod.io/) for writing code
+- [GitHub](https://github.com/) for code storage
+- [Heroku](https://www.heroku.com) for deployment
+- [AWS](https://aws.amazon.com/) for media storage
 
 ---
 
@@ -147,7 +156,7 @@ I have used these validators to check the validity of my code.
 - [W3C Markup Validation](https://validator.w3.org/)
     - no errors or warnings
 - [JShint JavaScript Validation](https://jshint.com/)  
-    - no errors but one undefined variable which is stripe which is used
+    - no errors but one undefined variable which is Stripe
 - [CI Python Linter Validation](https://pep8ci.herokuapp.com/)  
     - no errors or warnings
 
@@ -156,7 +165,10 @@ I have used these validators to check the validity of my code.
 
 ## Bugs
 
-
+I did stumble into a few problems of my own doing most of the time. These didn't really come to light until I started to test the responsiveness of the site. For example the navbar responsiveness was great until 420 width then the alignment all went out. I added a media query to fix this and to lessen my hero text top padding for better visual effect. I also found my quantity box in my product details was affected to because of the layout so another media query was added for that.
+I also found that when my bag was empty the footer was jumping inside my div that contained the text. So I had to change the position to fixed from static to fix that.
+![Jumping Footer](docs/images/footer-bug)
+However this meant on smaller screen some of my bottom content could not be seen so padding had to be added. After creating the product pages I felt having the home page background was too much so I went for a plain color to help the content stand but because of the design of the picture I could't see that I had put the image inside the body and overlay. This was overcome by removing it from the body and renaming the overlay class on my homepage to include the picture rather than going through all my pages to remove the overlay.
 
 ## Deployment
 
@@ -213,7 +225,7 @@ To deploy this page from Heroku, the following steps were taken:
 21. Up to date version of App is now deployed by pushing to GitHub
 22. Click 'Open App'
 
-AWS S3 Bucket Set-up
+### AWS S3 Bucket Set-up
 
 1. Create an [Amazon AWS account](https://aws.amazon.com/)
 2. Search for S3 in the search bar and create a new bucket
@@ -254,7 +266,7 @@ AWS S3 Bucket Set-up
         Click the checkbox to indicate that you understand the effects of the changes
         Click 'Save changes'
 
-AWS IAM (Identity and Access Management) setup
+### AWS IAM (Identity and Access Management) setup
 
 1. Search for IAM in the search bar
 2. Click on 'User Groups' in the left list
