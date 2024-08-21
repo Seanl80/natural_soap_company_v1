@@ -84,11 +84,16 @@ I have made the nine main pages of the site.
 ## Testing Developer Goals
 
 As a Developer, I would like:
-- to build a website which is easy to navigate through and use.
-- to make the user able to have their own profile for when they use the website.
-- to allow users the ability to create, display, edit and delete reviews.
-- develop a database structure which will allow for previous orders, wishlists, delivery info to be stored securely.
-- for superusers to be able to create, display, edit and delete products to sell.
+1. to build a website which is easy to navigate through and use.
+- I feel I achieved this by firstly having the big show now will leads directly to all products. The different categories are highlighted on hover and each product and page have clear navigation routes forwards and back.
+2. to make the user able to have their own profile for when they use the website.
+- I felt I wanted first time customers to be able to wander and navigate through the website without the pressure of having to make an account. The account icon stands out in the navbar with a simple process of creating an account. Users then experience the benefit of creating an accountas they can create a personal wishlist and have details saved when buying products for quicker checkout in the future.
+3. to allow users the ability to create, display, edit and delete reviews.
+- users when signed in can create, edit or delete their reviews they made on all products. Only superusers have the ability to edit or delete evry review made.
+4. develop a database structure which will allow for previous orders, wishlists, delivery info to be stored securely.
+- if a customer has signed in then this can be achieved by selecting the Account icon then My Profile for delivery info and past orders. Selecting the Account icon then Wishlist will allow customer to create and view a list of products they maybe interested in purchasing in the future.
+5. for superusers to be able to create, display, edit and delete products to sell.
+- this has been achieved as superusers have the ability to edit or delete all reviews as well as creating there own.
 
 ## Testing User Stories
 
