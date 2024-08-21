@@ -39,10 +39,12 @@ As a user of this website, I want:
 - ![#000000](https://placehold.co/15x15/000000/000000.png) `#000000`
 - ![#6c757d](https://placehold.co/15x15/6c757d/6c757d.png) `#6c757d`
 - ![#ff007b](https://placehold.co/15x15/ff007b/ff007b.png) `#ff007b`
+- ![#01013e](https://placehold.co/15x15/01013e/01013e.png) `#01013e`
+
+
 
 I felt these were a vibrant contrast to my beige background picture.
-I also tried to create shapes of soap bars within my website i.e. 
-like the blurred background of the text and the square boxes of the forms and the product cards.
+Originally I had my home page background picture displayed throughout the website but, especially with the pages that had images, I felt this clashed with my content so decided to go for a dark plain colour so I could let my content stand out more cleanly. 
 I felt the rounded edges of the buttons and lowercase within the buttons felt more relaxed like the products.
 
 
@@ -50,6 +52,19 @@ I felt the rounded edges of the buttons and lowercase within the buttons felt mo
 
 ## Wireframes
 
+[Wireframes](https://github.com/Seanl80/natural_soap_company_v1/blob/main/docs/wireframes/All-wireframes.pdf)
+
+Here are the original wireframes:
+I have made the nine main pages of the site.
+- Home page consists of an explanation of the site with navigation and shop now button. There will be icons in the navbar to login/register and a basket total.
+- The Products page will consist of rectangler cards showing the different products with their images and prices.
+- The Product details page will show a larger image and a more in depth description with a review section below.
+- The Wishlist page will show rectangular cards again with image and price with buttons to remove from wishlist or go to product details page.
+- The Basket page will contain a large image, product info and clear pricing and a total. There is buttons to make a choice whether to buy and go to checkout or to continue shopping.
+- The Checkout page will be a similar layout to the basket page but will ask for customer details and a permission check to store this info.
+- The Checkout success page will consist of an order confirmation the order was successful stating what was bought.
+- The Register page will be the base for all form pages with content being centered with white input boxes clearly labelled.
+- The Sign in page will be the base for my sign out page to keep things consistent again with clearly labelled white input boxes.
 
 
 ---
