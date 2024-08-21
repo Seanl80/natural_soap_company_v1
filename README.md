@@ -165,9 +165,11 @@ I have used these validators to check the validity of my code.
 
 ## Bugs
 
-I did stumble into a few problems of my own doing most of the time. These didn't really come to light until I started to test the responsiveness of the site. For example the navbar responsiveness was great until 420 width then the alignment all went out. I added a media query to fix this and to lessen my hero text top padding for better visual effect. I also found my quantity box in my product details was affected to because of the layout so another media query was added for that.
+I did stumble into a few problems of my own doing most of the time. These didn't really come to light until I started to test the responsiveness of the site. For example the navbar responsiveness was great until 420 width then the alignment all went out. I added a media query to fix this and to lessen my hero text top padding for better visual effect. I also discovered on my basket page under 420 width my two buttons stacked on top of each other whereas no others did. It took me a while to get at the issue but unchecking the display: inline-flex box in developer tools fixed the issue so I included d-inline in code surrounding the buttons and it fixed the issue.  
+![Buttons Stacking](docs/images/button-stack.png)  
+I also found my quantity box in my product details was affected to because of the layout so another media query was added for that.
 I also found that when my bag was empty the footer was jumping inside my div that contained the text. So I had to change the position to fixed from static to fix that.
-![Jumping Footer](docs/images/footer-bug)
+![Jumping Footer](docs/images/footer-bug.png)
 However this meant on smaller screen some of my bottom content could not be seen so padding had to be added. After creating the product pages I felt having the home page background was too much so I went for a plain color to help the content stand but because of the design of the picture I could't see that I had put the image inside the body and overlay. This was overcome by removing it from the body and renaming the overlay class on my homepage to include the picture rather than going through all my pages to remove the overlay.
 
 ## Deployment
