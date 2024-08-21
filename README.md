@@ -143,17 +143,13 @@ As a user of this website, I want:
 I have used these validators to check the validity of my code.
 
 - [W3C CSS Validation](https://jigsaw.w3.org/css-validator/)
-
+    - no errors or warnings
 - [W3C Markup Validation](https://validator.w3.org/)
-
+    - no errors or warnings
 - [JShint JavaScript Validation](https://jshint.com/)  
-    
-
+    - no errors but one undefined variable which is stripe which is used
 - [CI Python Linter Validation](https://pep8ci.herokuapp.com/)  
-    
-
-These are the lighthouse performance results.  
-
+    - no errors or warnings
 
 
 ---
@@ -164,7 +160,7 @@ These are the lighthouse performance results.
 
 ## Deployment
 
-This project was developed using the [Gitpod IDE](https://https://gitpod.io/). Then developments and changes were commited and pushed to GitHub.
+This project was developed using the [Gitpod IDE](https://https://gitpod.io/). Then developments and changes were commited and pushed to GitHub. Heroku was used to deploy this website and AWS used to hold the media files.
 
 
 To clone this project into Gitpod you will need:
@@ -183,22 +179,22 @@ Then follow these steps:
 
 To deploy this page from Heroku, the following steps were taken:
 
-1. Create a Heroku Account and log in. Click 'New' -> 'Create new app'.
-2. Enter a name for your project and select your region.
-3. Click 'Create app'.
-4. Navigate to PostgreSQL from Code Institute and enter your email.
-5. Update your project with the URL sent to your email.
-6. Make sure to have dj_database_url and psycopg2 installed.
-7. Login to the Heroku CLI - heroku login -i
-8. Run migrations on Heroku Postgres - python3 manage.py migrate
-9. Create a superuser - python3 manage.py createsuperuser
-10. Install gunicorn - pip3 install gunicorn
-11. Create a requirements.txt file - pip3 freeze > requirements.txt
-12. Create a Procfile.
+1. Create a Heroku Account and log in. Click 'New' -> 'Create new app'
+2. Enter a name for your project and select your region
+3. Click 'Create app'
+4. Navigate to PostgreSQL from Code Institute and enter your email
+5. Update your project with the URL sent to your email
+6. Make sure to have dj_database_url and psycopg2 installed
+7. Login to the Heroku CLI - `heroku login -i`
+8. Run migrations on Heroku Postgres - `python3 manage.py migrate`
+9. Create a superuser - `python3 manage.py createsuperuser`
+10. Install gunicorn - `pip3 install gunicorn`
+11. Create a requirements.txt file - `pip3 freeze > requirements.txt`
+12. Create a Procfile
 13. Disable Heroku from collecting static files
 14. Add the hostname to project settings.py file
-14. Commit and push the changes to GitHub.
-15. Go to 'Heroku Settings', click 'Reveal Config Vars'.
+14. Commit and push the changes to GitHub
+15. Go to 'Heroku Settings', click 'Reveal Config Vars'
 16. The following variables were added:
 - AWS_ACCESS_KEY_ID
 - AWS_SECRET_ACCESS_KEY
@@ -211,15 +207,89 @@ To deploy this page from Heroku, the following steps were taken:
 - STRIPE_WH_SECRET
 - USE_AWS
 17. Click on the 'Deploy' tab.
-18. Click 'Connect to GitHub'.
+18. Click 'Connect to GitHub'
 19. Find your repo and click 'Connect'
 20. Click 'Enable Automatic Deploys'
 21. Up to date version of App is now deployed by pushing to GitHub
-22. Click 'Open App'. 
+22. Click 'Open App'
+
+AWS S3 Bucket Set-up
+
+1. Create an [Amazon AWS account](https://aws.amazon.com/)
+2. Search for S3 in the search bar and create a new bucket
+3. To create the new bucket follow these steps:
+        Enter a bucket name
+        Select 'ACLs enabled'
+        Select 'Bucket owner preferred'
+        Deselect 'Block all public access'
+        Check the box to acknowledge the risk of public access
+        Leave the other options unchanged and click 'create bucket'
+4. Click bucket name then click 'Properties' tab 
+5. Scroll down to static web hosting click 'Edit' and enable them
+6. Save your changes then click 'Permissions' tab
+7. Scroll down to the Cross-origin resource sharing (CORS) section and click 'Edit'
+8. Add the following code and save changes 
+        `[
+        {
+            "AllowedHeaders": ["Authorization"],
+            "AllowedMethods": ["GET"],
+            "AllowedOrigins": ["*"],
+            "ExposeHeaders": []
+        }
+        ]`
+9. On the 'Permissions' tab of your S3 bucket, scroll to the 'Bucket policy' section
+10. Click 'Edit' then click 'Policy Generator', this will open in a new tab
+11. When entering info:
+        For the policy type you can select 'S3 Bucket Policy'
+        For the principal you can enter `*`
+        For the Action select GetObject' from the dropdown
+12. Go back copy the ARN and paste it into the ARN input
+13. Click add statement then generate policy
+14. Copy all the JSON text and paste it into the bucket policy
+15. Add `/*` to the end of the resource line within the quotes, to allow access to all objects within the bucket
+16. Save your changes
+17. Click on the 'Permissions' tab, scroll down to the Access control list section and click 'Edit'
+18. On the 'Edit Access control list' page: 
+        Click 'List' in the Everyone (public access)
+        Click the checkbox to indicate that you understand the effects of the changes
+        Click 'Save changes'
+
+AWS IAM (Identity and Access Management) setup
+
+1. Search for IAM in the search bar
+2. Click on 'User Groups' in the left list
+3. Click 'Create', name it then scroll down and click 'Create User Group'
+4. Click 'Policies' in the menu to the left and click 'Create policy'
+5. After clicking the 'JSON' tab from the dropdown 'Actions' menu select 'Import policy'
+6. Search for 'S3', then select 'AmazonS3FullAccess', then click 'Import Policy'
+7. Search for 'S3' in the top search bar and open it in a new tab
+8. Select your bucket then click 'Copy ARN'
+9. In the policy editor within 'Resources' and square brackets paste the arn twice adding `/*` to the end of the second arn
+10. Click next, enter a policy name and description then click 'Create policy'
+11. Click 'User groups' in the menu to the left then click on your group
+12. Click the on the 'Permissions' tab and from the 'Add permissions' dropdown click 'Attach policies'
+13. Select the checkbox beside your policy and click 'Attach policies'
+14. Select 'Users' in the left menu and click 'Create user'
+15. Enter a user name then click 'Next'
+16. Select the group you have created click 'Next' then click 'Create user'
+17. To create an access key click on the new user
+18. Click 'Security credentials' tab
+19. Scroll down to the 'Access keys' section and click 'Create access key'
+20. Select application running outside AWS, click 'Next' then click 'Create access key'
+21. Download the CSV file then click 'Done' to finish the process
+22. The CSV file will contain your access key ID and the secret key values for heroku
+
+
+
+
+
+
 
 ---
 
 ## Credits
+
+My thanks go out to the tutors at Code Institute, my mentor Harry and also Code Institute for providing me a knowledge base to be able to do a project like this.
 
 ### Code
 
