@@ -5,6 +5,7 @@ from products.models import Product
 from .forms import ReviewForm
 from django.contrib import messages
 
+
 @login_required
 def add_review(request, product_id):
     product = get_object_or_404(Product, id=product_id)
@@ -18,14 +19,17 @@ def add_review(request, product_id):
             return redirect('product_detail', product_id=product.id)
     else:
         form = ReviewForm()
-    return render(request, 'reviews/add_review.html', {'form': form, 'product': product})
+    return render(
+        request, 'reviews/add_review.html', {'form': form, 'product': product})
+
 
 @login_required
 def edit_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
-    
+
     if review.user != request.user and not request.user.is_superuser:
-        messages.error(request, "You do not have permission to edit this review.")
+        messages.error(
+            request, "You do not have permission to edit this review.")
         return redirect('product_detail', product_id=review.product.id)
 
     if request.method == 'POST':
@@ -37,7 +41,10 @@ def edit_review(request, review_id):
     else:
         form = ReviewForm(instance=review)
 
-    return render(request, 'reviews/edit_review.html', {'form': form, 'review': review})
+    return render(
+        request,
+        'reviews/edit_review.html',
+        {'form': form, 'review': review})
 
 
 @login_required
@@ -45,7 +52,8 @@ def delete_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
 
     if review.user != request.user and not request.user.is_superuser:
-        messages.error(request, "You do not have permission to delete this review.")
+        messages.error(
+            request, "You do not have permission to delete this review.")
         return redirect('product_detail', product_id=review.product.id)
 
     product_id = review.product.id
@@ -54,9 +62,10 @@ def delete_review(request, review_id):
     return redirect('product_detail', product_id=product_id)
 
 
-
 def product_reviews(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     reviews = product.reviews.all()
-    return render(request, 'reviews/product_reviews.html', {'product': product, 'reviews': reviews})
-    
+    return render(
+        request,
+        'reviews/product_reviews.html',
+        {'product': product, 'reviews': reviews})

@@ -4,6 +4,7 @@ from django.contrib import messages
 from products.models import Product
 from .models import WishlistItem
 
+
 @login_required
 def wishlist(request):
     """
@@ -27,8 +28,9 @@ def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
 
     # Check if the product is already in the wishlist
-    wishlist_item, created = WishlistItem.objects.get_or_create(user=request.user, product=product)
-    
+    wishlist_item, created = WishlistItem.objects.get_or_create(
+        user=request.user, product=product)
+
     if created:
         messages.info(request, "A new product was added to your wishlist")
     else:
@@ -44,7 +46,8 @@ def remove_from_wishlist(request, product_id):
     wishlist after login
     """
     product = get_object_or_404(Product, pk=product_id)
-    wishlist_item = WishlistItem.objects.filter(user=request.user, product=product)
+    wishlist_item = WishlistItem.objects.filter(
+        user=request.user, product=product)
 
     if wishlist_item.exists():
         wishlist_item.delete()

@@ -17,19 +17,23 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        'Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
     ingredients = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)  # Average rating
+    # Average rating
+    rating = models.DecimalField(
+        max_digits=6, decimal_places=2, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def update_rating(self):
         reviews = self.reviews.all()
         if reviews.exists():
-            average = sum(review.rating for review in reviews) / reviews.count()
+            average = sum(
+                review.rating for review in reviews) / reviews.count()
             self.rating = round(average, 2)
             self.save()
 
