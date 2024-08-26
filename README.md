@@ -83,6 +83,8 @@ The toasts I kept a white background on so they would stand out as I have a time
 - The WishlistItem model allows users to save items for future viewing or purchasing.
 - This model is connected to the user and to the product using the ID so users can create their own personal lists.
 
+[DataBase Diagram](https://github.com/Seanl80/natural_soap_company_v1/blob/main/media/database.png)
+
 ---
 
 ## Wireframes
@@ -91,7 +93,7 @@ The toasts I kept a white background on so they would stand out as I have a time
 
 Here are the original wireframes:
 I have made the nine main pages of the site.
-- The <strong>Home page</strong> consists of an explanation of the site with navigation and shop now button. There will be icons in the navbar to <strong>login/register</strong> and a basket total.
+- The <strong>Home page</strong> consists of an explanation of the site with navigation and shop now button. There will be icons in the navbar to login/register and a basket total.
 - The <strong>Products page</strong> will consist of rectangler cards showing the different products with their images and prices.
 - The <strong>Product details</strong> page will show a larger image and a more in depth description with a review section below.
 - The <strong>Wishlist page</strong> will show rectangular cards again with image and price with buttons to remove from wishlist or go to product details page.
