@@ -47,10 +47,41 @@ The basic colour range for this website are with the following colours :
 
 
 I felt these were a vibrant contrast to my beige background picture.
+I chose my hero picture as I felt firstly it was a great picture which had structure, different colours, little details to discover and fitted well into the theme of the site.
 Originally I had my home page background picture displayed throughout the website but, especially with the pages that had images, I felt this clashed with my content so decided to go for a dark plain colour so I could let my content stand out more cleanly. 
 I felt the rounded edges of the buttons and lowercase within the buttons felt more relaxed like the products.
 The toasts I kept a white background on so they would stand out as I have a timer for how long they appear for.
 
+
+---
+
+## Database Structure
+
+### Key Modals
+
+#### UserProfile
+
+- The User Profile is connected to the User model created by Allauth on registration.
+- These fields can be saved by the user to pre-populate shipping details to speed up the checkout process.
+
+#### Order
+
+- The order model is connected to the User Profile, so users can view their old orders.
+- The order model acts as a container for the order line items. Although is the item is stored within the OrderLineItem model, having them connected allows to retrieve the item purchased.
+
+#### Product
+
+- The Product model holds key information for each product. Each product has a unique ID.
+- The Product model is connected to the Category model, this allows the user to filter products by category.
+
+#### Review
+
+- With this model users can leave reviews for individual products as this connects to the Products model using ID and uses the User model for the username.
+
+#### WishlistItem
+
+- The WishlistItem model allows users to save items for future viewing or purchasing.
+- This model is connected to the user and to the product using the ID so users can create their own personal lists.
 
 ---
 
@@ -77,7 +108,7 @@ I have made the nine main pages of the site.
 
 For this website I have chosen to use: 
 - <strong>HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong>
-- <strong>Python</strong> and <strong>Postgresql</strong>
+- <strong>Python</strong>, <strong>Django</strong> and <strong>PostgreSQL</strong>
 
 As well as:
 - [Bootstrap](https://getbootstrap.com/) for structure and layout
@@ -95,9 +126,9 @@ As well as:
 
 As a Developer, I would like:
 1. to build a website which is easy to navigate through and use.
-- I feel I achieved this by firstly having the big show now will leads directly to all products. The different categories are highlighted on hover and each product and page have clear navigation routes forwards and back.
+- I feel I achieved this by firstly having the big shop now which leads directly to all products. The different categories are highlighted on hover and each product and page have clear navigation routes forwards and back.
 2. to make the user able to have their own profile for when they use the website.
-- I felt I wanted first time customers to be able to wander and navigate through the website without the pressure of having to make an account. The account icon stands out in the navbar with a simple process of creating an account. Users then experience the benefit of creating an accountas they can create a personal wishlist and have details saved when buying products for quicker checkout in the future.
+- I felt I wanted first time customers to be able to wander and navigate through the website without the pressure of having to make an account. The account icon stands out in the navbar with a simple process of creating an account. Users then experience the benefit of creating an account as they can create a personal wishlist and have details saved when buying products for quicker checkout in the future.
 3. to allow users the ability to create, display, edit and delete reviews.
 - users when signed in can create, edit or delete their reviews they made on all products. Only superusers have the ability to edit or delete evry review made.
 4. develop a database structure which will allow for previous orders, wishlists, delivery info to be stored securely.
@@ -138,7 +169,7 @@ As a user of this website, I want:
 ![Order confirmation](docs/images/order-confirm.png)
 ![Email confirmation](docs/images/order-confirm-email.png)
 9. to be able to ammend my details and to be able to view my past orders.
-- thi can be done easily from the My Profile screen where details are stored and past orders are listed and can be clicked to view full details.
+- this can be done easily from the My Profile screen where details are stored and past orders are listed and can be clicked to view full details.
 ![Ammending details and Past orders](docs/images/edit-past-orders.png)
 10. to be able to make a list of items I would like to buy in the future.
 - the wishlist is a great way for product short cuts and to keep potential buys in a personal space for future use.
@@ -196,7 +227,7 @@ To deploy this page from Heroku, the following steps were taken:
 1. Create a Heroku Account and log in. Click 'New' -> 'Create new app'
 2. Enter a name for your project and select your region
 3. Click 'Create app'
-4. Navigate to PostgreSQL from Code Institute and enter your email
+4. Navigate to [Code Institutes database creator](https://dbs.ci-dbs.net/) and enter your email
 5. Update your project with the URL sent to your email
 6. Make sure to have dj_database_url and psycopg2 installed
 7. Login to the Heroku CLI - `heroku login -i`
