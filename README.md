@@ -178,9 +178,85 @@ As a user of this website, I want:
 
 ---
 
-## Testing
+## Manual Testing
 
-I have used these validators to check the validity of my code.
+#### Navigation Bar
+
+Navigation bar is fully responsive on large/medium/small resolutions.
+All navigation links stay inline when width is reduced.
+All links are correctly redirecting to the correct pages.
+Signing in, correctly shows the correct dropdown options, My Profile, My Wishlist and Logout.
+Signing out, correctly shows the correct dropdown options, Log in and Register.
+
+#### Footer
+
+The background colour of the social media icons change on hover.
+Links redirect to the correct social media page.
+Links open in a new browser tab.
+
+#### Products
+
+Sorting functionality works, correctly sorting products by price descending or ascending.
+Product names and prices match against their fields in the database.
+Products have the correct tag.
+Tags are correctly redirecting and filtering products by category name.
+
+#### Products Details
+
+Correct redirect to the correct product on clicking the product image.
+Products details are correct and match the details in the database.
+Product quantity buttons are correctly disabled when at 1 or 99.
+Add to wishlist button correctly only shows up for logged-in users.
+Links correctly work, redirecting back to the products page and adding the product to the shopping bag.
+
+#### Reviews
+
+Product reviews show for the correct product, matching the database.
+Only logged in users can add reviews.
+Only the user who created the review or superusers have the option to edit a review.
+Editing a review, edits the review, redirects to the correct section of the page.
+Deleting a review, deletes the review, redirects to the correct section of the page.
+
+#### WishList
+
+Users who are not logged in are redirected to the login page when clicking the Add to WishList button.
+Products details links correctly redirects to the correct page when clicking the link on the WishList Page.
+Removing an item from the WishList working correctly, correctly reflected within the database.
+
+#### Admin
+
+Only admins have access to the Product Management page on the account dropdown.
+Only admins can see the Edit/Delete buttons on the product details page.
+Product Management links correctly redirect to the add product page.
+Adding a product working correctly.
+Editing the product, working fully, reviews are maintained for the products after editing.
+Delete button correctly shows a modal to confirm the delete.
+Deleting a product correctly removed the product from the database, and any reviews for the products are also deleted.
+
+#### Shopping Bag
+
+Basket link in the navbar shows the correct value of the current bag session.
+Quantity buttons are working correctly preventing the user from exceeding 99 and going below 1.
+Correct products are shown in the shopping bag.
+Adding items to the bag, and logging in after correctly retains the current bag.
+Correct totals are shown.
+Free delivery threshold correctly updates, shows correct values.
+
+#### Checkout
+
+Correct items are carried over from your basket to the checkout page.
+Form correctly responds to invalid inputs.
+Redirects to the checkout success page correctly.
+Stripe correctly showing 200 status webhooks for orders.
+
+#### Search Bar
+
+Showing correct search for words searched.
+Adding a new product and search by its name correctly shows the product.
+User feedback is accurate.
+
+
+#### I have used these validators to check the validity of my code.
 
 - [W3C CSS Validation](https://jigsaw.w3.org/css-validator/)
     - no errors or warnings
