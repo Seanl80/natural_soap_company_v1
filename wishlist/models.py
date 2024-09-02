@@ -9,8 +9,11 @@ class WishlistItem(models.Model):
     """
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='wishlist_items')
+    # User who owns wishlist
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    # Product added to wishlist
     added_at = models.DateTimeField(auto_now_add=True)
+    # When review was created
 
     class Meta:
         unique_together = ('user', 'product')

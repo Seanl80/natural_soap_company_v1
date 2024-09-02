@@ -10,10 +10,11 @@ class Review(models.Model):
     """
     product = models.ForeignKey(
         Product, related_name='reviews', on_delete=models.CASCADE)
+    # Product that review is left for
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)  # Link to the user who left the review
-    rating = models.IntegerField(default=1)
-    comment = models.TextField()
+    rating = models.IntegerField(default=1)  # Overall rating
+    comment = models.TextField()  # Review comment textbox
     created_at = models.DateTimeField(
         default=timezone.now)  # Date the review was created
 
