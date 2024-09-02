@@ -76,7 +76,8 @@ The toasts I kept a white background on so they would stand out as I have a time
 
 #### Review
 
-- With this model users can leave reviews for individual products as this connects to the Products model using ID and uses the User model for the username.
+- The Review model allows users to leave reviews for individual products.
+- This model is connected to the Products model using ID and uses the User model for the username.
 
 #### WishlistItem
 
@@ -208,7 +209,6 @@ Tags are correctly redirecting and filtering products by category name.
 Correct redirect to the correct product on clicking the product image.
 Products details are correct and match the details in the database.
 Product quantity buttons are correctly disabled when at 1 or 99.
-Add to wishlist button correctly only shows up for logged-in users.
 Links correctly work, redirecting back to the products page and adding the product to the shopping bag.
 
 #### Reviews
@@ -222,7 +222,7 @@ Deleting a review, deletes the review, redirects to the correct section of the p
 #### WishList
 
 Users who are not logged in are redirected to the login page when clicking the Add to WishList button.
-Products details links correctly redirects to the correct page when clicking the link on the WishList Page.
+Product detail link correctly redirects to the correct page when clicking the link on the WishList Page.
 Removing an item from the WishList working correctly, correctly reflected within the database.
 
 #### Admin
