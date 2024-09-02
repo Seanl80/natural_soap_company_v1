@@ -4,6 +4,9 @@ from products.models import Product
 
 
 class WishlistItem(models.Model):
+    """
+    WishlistItem Model to add items to users wishlist
+    """
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='wishlist_items')
     product = models.ForeignKey(Product, on_delete=models.CASCADE)

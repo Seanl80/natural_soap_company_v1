@@ -5,6 +5,9 @@ from products.models import Product
 
 
 class Review(models.Model):
+    """
+    Review Model to leave reviews for individual products
+    """
     product = models.ForeignKey(
         Product, related_name='reviews', on_delete=models.CASCADE)
     user = models.ForeignKey(
